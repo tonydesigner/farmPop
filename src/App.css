@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap');
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+html,body{height: 100vh; font-family: 'Raleway', sans-serif;}
+
+:root{
+	--df:flex;
+	--jcc:center;
+	--jca:space-around;
+	--jcb:space-between;
+	--ai:center;
+	--bgp:#000;
+	--bgb:#fff;
+	--bg: #00AFEF;
+	--sch: 450px;  
+}
+
+.center{display:var(--df);justify-content: var(--jcc);align-items: var(--ai);}
+.margin{display:var(--df);justify-content: var(--jca);align-items: var(--ai);}
+.space{display:var(--df);justify-content: var(--jcb);align-items: var(--ai);}
+
+
+.brd{border: 1px solid;}
+section{height:var(--sch)}
+.slid{background-image:url('https://drogariaspacheco.vteximg.com.br/arquivos/dpsp-cabelos-25-out-2022-b2-770x300.png?v=638022132564800000');background-repeat:no-repeat; background-size: cover; background-position:center;  color:var(--bgb); height:100%}
+
+.topo{ height: 140px; background-color:var(--bg); padding:1em}
+.topo img{width:180px;}
+
+form{width:815px; height:100%;padding:1em;text-align: right;}
+form input{width: 362px; height:33px; padding:.4em; font-size: 1em;outline: none;border-radius:.3em; border:0;}
+form button{width:82px; height:33px;background-color:var(--bg); color:var(--bgb); border: 1px solid;border-radius:.3em;cursor:pointer;margin: 0 1em;}
+form button:hover{ box-shadow: 1px 5px 15px #008dd4;}
+
+.destaques{height:auto;padding:1em; max-width: 1000px; margin: 0 auto;}
+.cx{width: 300px; height: 218px; text-align:center; padding:1em }
+.cx img {width:100%;}
+
+
+.menu{text-align: center; height: 100px; background-color:var(--bgb); padding: 2em}
+.menu ul li{display: inline; font-size: 14pt; color: var(--bg); padding:1em; font-weight: bold;}
+.menuMobile{display: none; width:100%; height: 350px; background-color: rgb(255,255,255); position:absolute; top: 12em; z-index:1; color:var(--bgb);}
+.icon{display: none;}
+
+.link{text-decoration:none; color: var(--bg	); padding: 1em; transition: 1s;}
+.link:hover{color: red;}
+
+
+
+.prodHeader h2{border-bottom: 3px solid #ccc;}
+
+h3{border-bottom: 3px solid var(--bg); padding:1em; color: #666;}
+
+.prod{padding:1em; max-width: 950px; height:auto; margin: 0 auto; flex-wrap: wrap;}
+
+.box{width:255px; height:auto; margin: .5em 1em; padding:1em;box-shadow: 0px 5px 5px #ccc; cursor: pointer;}
+.box img{width: 225px; }
+.box span{padding:.3em; display:block;height:45px; width:100%; text-align: right; font-size: 19pt; font-family: 'Bebas', sans-serif; font-weight: bold;color: var(--bg)}
+
+.box:hover{animation: anime 1s ease-out;}
+
+.rodape{ height: 250px;background-color: var(--bg); color: var(--bgb); text-align: center}
+
+@media (max-width: 600px){
+	.topo{display:block; width: 100%;height:auto; text-align:center}
+	.topo img{width: 250px;}
+	form{display: block; width:100%; text-align:center;}
+	.menu{display:none;}
+	.menuMobile{ display:none; width: 70%; height:auto; box-shadow: 5px 6px 10px #ccc;}
+	.menuMobile ul li{animation: menu 1s ease-out; padding:1em;   color: var(--bgb);}
+	.icon{display: block}
+}
+
+
+@keyframes menu{
+	0%{ opacity:0;}
+	100%{  opacity:1;}
+}
+
+
+@keyframes anime{
+	50% {transform: translateY(-15px); box-shadow: 2px 5px 15px #ccc;}
+	100% {transform: translateY(0); box-shadow: 2px 5px 15px #ccc;}
+}
